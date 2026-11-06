@@ -51,5 +51,6 @@ Frontend (`frontend/src`):
 - `App.jsx` main component; add components under `components/`
 
 ## Notes
+- The backend uses ES modules (`"type": "module"`): use `import`/`export default`, and include the `.js` extension in relative imports (e.g. `import taskRoutes from "./routes/tasks.js"`).
 - CORS allows `http://localhost:5173` (change `CORS_ORIGIN` in `backend/.env`).
 - `.env` files are git-ignored; `.env.example` files are committed.

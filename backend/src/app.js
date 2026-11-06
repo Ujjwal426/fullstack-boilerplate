@@ -1,6 +1,6 @@
-const express = require("express");
-const cors = require("cors");
-const healthRoutes = require("./routes/health");
+import express from "express";
+import cors from "cors";
+import healthRoutes from "./routes/health.js";
 
 const app = express();
 
@@ -25,4 +25,4 @@ app.use((err, req, res, next) => {
   res.status(err.status || 500).json({ message: err.message || "Internal server error" });
 });
 
-module.exports = app;
+export default app;

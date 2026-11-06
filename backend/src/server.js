@@ -1,6 +1,7 @@
-require("dotenv").config();
-const app = require("./app");
-const connectDB = require("./config/db");
+// Must be the first import so env vars are loaded before other modules read them
+import "dotenv/config";
+import app from "./app.js";
+import connectDB from "./config/db.js";
 
 const PORT = process.env.PORT || 5000;
 

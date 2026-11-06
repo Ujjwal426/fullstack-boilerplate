@@ -1,6 +1,6 @@
-const mongoose = require("mongoose");
+import mongoose from "mongoose";
 
-async function connectDB() {
+export default async function connectDB() {
   const uri = process.env.MONGO_URI || "mongodb://127.0.0.1:27017/boilerplate";
   try {
     await mongoose.connect(uri, { serverSelectionTimeoutMS: 5000 });
@@ -10,5 +10,3 @@ async function connectDB() {
     console.error("MongoDB connection failed:", err.message);
   }
 }
-
-module.exports = connectDB;
